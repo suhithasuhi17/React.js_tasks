@@ -1,17 +1,25 @@
-// App.js
-import React from "react";
-import Sidebar from "./Sidebar";
-import PermissionTable from "./PermissionTable";
+import React from 'react';
+import { BrowserRouter,Routes, Route} from 'react-router-dom';
+import Header from './Components/Header';
+import Content from './Components/Content';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
-const App = () => {
+import'./Landingpage.css'
+
+
+function App() {
   return (
-    <div className="flex">
-      <Sidebar />
-      <div className="flex-grow bg-white">
-        <PermissionTable />
-      </div>
-    </div>
+
+    <>
+      <Header />
+      <Content />
+     <Contact/>
+      <Footer />
+      
+    </>
+   
   );
-};
+}
 
 export default App;
