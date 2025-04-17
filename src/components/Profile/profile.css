@@ -1,0 +1,132 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* Profile Card Container */
+.profile-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  padding: 20px;
+}
+
+/* Profile Card */
+.profile-card {
+  background-color: hsl(240, 33%, 98%);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+/* Header Section */
+.profile-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  margin-left: 15px;
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile-title,
+.profile-location {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 2px 0;
+}
+
+/* Buttons */
+.edit-btn {
+  padding: 5px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.edit-btn.primary {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+}
+
+.edit-btn.primary:hover {
+  background-color: #0056b3;
+}
+
+/* Sections */
+.profile-section {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Info Rows */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+/* Input Field */
+.info-input {
+  width: 60%;
+  padding: 5px;
+  background-color: #f9fafb; /* Matches the container background */
+  font-size: 0.875rem;
+  color: #1f2937;
+  outline: none; /* Prevents default focus outline */
+  border: none; /* Removes border */
+  pointer-events: none; /* Prevents interaction when in read-only mode */
+}
+
+/* When input is editable (on focus), no border should appear */
+.info-input:focus {
+  outline: none;
+  border: none;
+  background-color: #ffffff; /* Optional: slight change for focus state */
+}
+
+/* Override pointer-events when editable */
+.info-input:read-write {
+  pointer-events: auto;
+}
